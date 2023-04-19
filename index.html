@@ -1,38 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Lab 4 - My secure website</title>
-
-  <script type="module">
-    document.documentElement.classList.remove('no-js');
-    document.documentElement.classList.add('js');
-  </script>
-
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="stylesheet" href="/assets/css/print.css" media="print">
-
-  <meta name="description" content="Page description">
-  <meta property="og:title" content="Unique page title - My Site">
-  <meta property="og:description" content="Page description">
-  <meta property="og:image" content="https://www.mywebsite.com/image.jpg">
-  <meta property="og:image:alt" content="Image description">
-  <meta property="og:locale" content="en_GB">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:url" content="https://www.mywebsite.com/page">
-  <link rel="canonical" href="https://www.mywebsite.com/page">
-
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/my.webmanifest">
-  <meta name="theme-color" content="#FF00FF">
+  <meta charset="utf-8">
+  <title>HTML Forms</title>
 </head>
 
 <body>
-  <h2>Hi, this is Lab - 4 - Secure Site Headers</h2>
+  <header>
+    <h1 id="store-heading">
+      <a href="#">Fake Store</a>
+    </h1>
+  </header>
+  <div id="main-menu">
+    <ul>
+      <li><a href="#">Account</a></li>
+      <li><a href="#">Cart</a></li>
+    </ul>
+  </div>
+  <nav id="main-navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Checkout Order #1234 - Billing and Payment</h2>
+      <p>Order total: $256.87</p>
+    </section>
+    <form action="forms.html" method="post">
+      <fieldset>
+        <legend>
+          Billing Information
+        </legend>
+        <div>
+          <label for="firstname">First name:</label>
+          <input type="text" id="firstname" name="firstname" placeholder="John">
+          <label for="lastname">Last name:</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Doe">
+        </div>
+        <div>
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" placeholder="123 Fake Street">
+        </div>
+        <div>
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" placeholder="Toronto">
+          <label for="province">Province:</label>
+          <select id="province" name="province">
+            <option selected>-- Choose Province --</option>
+            <option value="MB">Manitoba</option>
+            <option value="ON">Ontario</option>
+            <option value="QC">Quebec</option>
+          </select>
+          <label for="postal">Postal code:</label>
+          <input type="text" id="postal" name="postal" placeholder="A1A 1A1">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Payment Information</legend>
+        <fieldset>
+          <legend>Choose card</legend>
+          <div>
+            <input type="radio" id="mastercard" name="cardpayment" value="mastercard">
+            <label for="mastercard">MasterCard</label>
+          </div>
+          <div>
+            <input type="radio" id="visa" name="cardpayment" value="visa">
+            <label for="visa">Visa</label>
+          </div>
+          <div>
+            <label for="cardNumber">Card number:</label>
+            <input type="number" id="cardNumber" name="cardNumber" placeholder="1234 1234 1234 123">
+          </div>
+          <div>
+            <label for="cardExpiry">Card expiry:</label>
+            <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/YY">
+          </div>
+        </fieldset>
+      </fieldset>
+      <button type="submit" name="payNow" id="payNow">Pay now</button>
+    </form>
+  </main>
+  <footer>
+    <p>&#169; Copyright HTTP5111, 2022.</p>
+  </footer>
 </body>
+
 </html>
