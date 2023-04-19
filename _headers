@@ -4,4 +4,5 @@
   X-Content-Type-Options: nosniff
   Content-Security-Policy: script-src 'self'
   Referrer-Policy: no-referrer
+  Permissions-Policy: geolocation=(self "https://spontaneous-cuchufli-7e9071.netlify.app/"), microphone=()
 
